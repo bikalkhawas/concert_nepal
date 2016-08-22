@@ -35,14 +35,22 @@
 
 		<div id="main_content">
 			<div id="header">
+
+
 				<% if current_page?(root_path) %>
+				<%= form_tag search_posts_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
+					<p>
+					    <%= text_field_tag :search, params[:search], class: "form-control" %>
+					    <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+					</p>
+				<% end %>
 					<p>All Posts</p>
 				<% elsif current_page?(about_path) %>
 					<p>About</p>
 				<% else %>
 					<%= link_to "Back to All Posts", root_path %>
 				<% end %>
-
+				 		
 				<% if user_signed_in? %>
 					<div class="buttons">
 						<button class="button"><%= link_to "New Post", new_post_path %></button>

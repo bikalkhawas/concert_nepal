@@ -33,6 +33,8 @@ gem 'devise', '~> 4.2'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
+gem 'searchkick', '~> 1.3', '>= 1.3.3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
