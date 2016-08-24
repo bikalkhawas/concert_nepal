@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
- @import 'normalize';
+	@import "bootstrap-sprockets";
+	@import "bootstrap";
+	@import 'normalize';
 
  html, body {
 	font-family: 'Raleway', sans-serif;
@@ -50,7 +51,7 @@ a {
 		padding-right: 3em;
 		.category {
 			font-weight: 700;
-			font-size: 0.7em;
+			font-size: 0.9em;
 			text-transform: uppercase;
 			color: #33acb7;
 		}
@@ -75,7 +76,7 @@ a {
 		position: absolute;
 		right: 3em;
 		top: 80%;
-		font-size: .8em;
+		font-size: 1.1em;
 		color: #9eafba;
 	}
 }
@@ -135,7 +136,7 @@ a {
 				font-weight: 500;
 				text-decoration: none;
 				color: #2a2f35;
-				font-size: 1.5em;
+				font-size: 1em;
 				&:hover {
 					color: #33acb7;
 				}
