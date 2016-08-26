@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 	before_action :authenticate_user!, except: [:index, :show]
+	before_action :correct_user,       only: [:destroy, :edit]
+
 
 	def search
 		if params[:search].present?
@@ -63,4 +65,12 @@ class PostsController < ApplicationController
 	def post_params
 		params.require(:post).permit(:title, :date, :time, :location)
 	end
+
+	def correct_user
+        @post = current_user.posts.find_by(id: params[:id])
+        if @post.nil?
+          flash[:alert] = "Not your post!"
+          redirect_to :back
+        end
+    end
 end
