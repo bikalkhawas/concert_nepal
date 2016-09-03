@@ -16,4 +16,7 @@ Rails.application.routes.draw do
 	root "posts#index"
 
 	get '/about', to: 'pages#about'
+
+	match '/contacts',     to: 'contacts#new',             via: 'get'
+	resources "contacts", only: [:new, :create]
 end
