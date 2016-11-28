@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
 	get '/about', to: 'pages#about'
 
+	get '/member', to: 'contributors#member'
+
 	match '/contacts',     to: 'contacts#new',             via: 'get'
 	resources "contacts", only: [:new, :create]
 end

@@ -42,7 +42,7 @@ a {
 	#logo {
 		width: 40px;
 		position: absolute;
-		right: 3em;
+		right: 6em;
 		top: 3em;
 	}
 	ul {
@@ -278,5 +278,24 @@ a {
 
 .contact_page_title{
 	padding-left: 21px;
+}
 
+h1 {
+  text-transform: uppercase;
+  margin-left: 1em;
+}
+
+#contributors_image {
+  margin-left: 3em;
+  text-align: center;
+}
+#contributors_image figure {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+#contributors_image img {
+  display: block;
+  border-radius: 100%;
+  max-width: 100%;
 }
